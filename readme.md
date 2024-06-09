@@ -1,13 +1,16 @@
 # 动态Bean注册Groovy逆向解析插件加载器
 ---
 
-## **简介：**
+## **简介**
 
 该项目提供了一个基于Groovy的插件化开发框架，旨在实现动态加载Groovy脚本并将其注册为Spring应用程序上下文中的Bean。这使得您可以轻松地扩展和定制应用程序的功能，而无需修改主应用程序代码。
+## Groovy 编译机制
+Groovy 代码会被编译成 Java 字节码，并通过 GroovyClassLoader 进行加载。
+GroovyClassLoader 是 Java 类加载器的一个扩展，它可以加载 Groovy 类，并将其编译成 Java 类。
 
 ---
 
-## **主要功能：**
+## **主要功能**
 
 1. **动态插件加载：** 通过GroovyClassLoader从jar文件中动态加载Groovy脚本，实现了热插拔和运行时更新的功能。
 
@@ -29,18 +32,18 @@
 | acctSyncService       | acctSourceScanService, acctBufferSyncService |
 | acctBufferSyncService | acctSourceScanService          |
 
-## **使用指南：**
+## **使用指南**
 
-1. **安装：**
+1. **安装**
 
    - 将存储库克隆到本地计算机。
    - 确保您的计算机上已经安装了JDK、Maven和Spring Framework等必要的开发工具。
 
-2. **配置：**
+2. **配置**
 
    - 在`Tool_GroovyShell.java`文件中，根据您的需求修改`rootPath`变量，指定Groovy脚本所在的目录路径。
 
-3. **使用：**
+3. **使用**
 
    - 编写您的Groovy脚本，并确保在需要注册为Bean的类上使用`@SysDatasourceParser`注解进行标注。
    - 将编写好的Groovy脚本打包成jar文件，并将其放置在指定的目录中。
@@ -48,7 +51,7 @@
 
 ---
 
-## **安全性考虑：**
+## **安全性考虑**
 
 - 使用RSA加密算法对jar文件进行解密，防止恶意篡改和数据泄露。
 - 通过文件后缀和正则表达式校验确保文件格式正确性。
