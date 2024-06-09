@@ -1,15 +1,6 @@
-package com.dbappsecurity.zerotrust.iam.resource.utils;
-
-
-
 import com.dbappsecurity.zerotrust.constants.InvokeCode;
 import com.dbappsecurity.zerotrust.domain.InvokeResult;
-
-
-
 import com.dbappsecurity.zerotrust.iam.resource.manager.annotation.SysDatasourceParser;
-
-
 import com.dbappsecurity.zerotrust.iam.resource.service.acct.AcctSourceScanService;
 import com.dbappsecurity.zerotrust.iam.resource.service.acct.AcctSyncService;
 import com.dbappsecurity.zerotrust.iam.resource.service.acct.common.BaseAcctBufferSyncServiceImpl;
@@ -23,8 +14,6 @@ import org.springframework.beans.factory.config.AutowireCapableBeanFactory;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.web.multipart.MultipartFile;
-
-
 import javax.crypto.Cipher;
 import java.io.File;
 import java.io.FileOutputStream;
