@@ -18,7 +18,7 @@
 4. **安全部署：** 在处理jar文件之前，通过RSA加密算法对其进行安全解密，确保数据的完整性和安全性。
 
 ---
-## **项目场景 **
+## 项目场景 
 账号源对接模块，针对定制化的账号源需要实现三个业务类：acctSourceScanService、acctBufferSyncService和acctSyncService。
 **acctSourceScanService.groovy**：完成组织、用户数据同步至本地缓冲表
 **acctBufferSyncService.groovy**：完成组织、用户数据从本地缓冲表同步至数据库
